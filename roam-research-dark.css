@@ -315,10 +315,10 @@ code {
 }
 
 h1 > a {
-	color: rgb(255, 159, 10) !important;
+	color: var(--link-color) !important;
 }
 a > span {
-	color: rgb(255, 159, 10) !important;
+	color: var(--link-color) !important;
 }
 
 .rm-query {
@@ -337,7 +337,7 @@ a > span {
 }
 
 .rm-page-ref-link-color {
-	color: rgb(255, 159, 10) !important;
+	color: var(--link-color) !important;
 }
 
 .rm-reference-item {
