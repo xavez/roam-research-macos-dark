@@ -11,4 +11,4 @@
 
 # Preview
 
-(TODO)
+![Preview of Roam Research macOS Dark Theme](https://xavez.github.io/roam-research-macos-dark/roam-research-macos-dark.png)
