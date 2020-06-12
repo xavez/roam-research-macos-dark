@@ -204,10 +204,15 @@ select {
 * Body
 */
 
+html,
 body,
 .roam-body .roam-app,
 .rm-quick-capture-sync-modal {
 	background: var(--bg-color-100) !important;
+}
+
+.loading-astrolabe {
+	filter: invert();
 }
 
 /**
