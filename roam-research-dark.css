@@ -6,7 +6,8 @@
 
 :root {
 	--bg-color: #1E1F22;
-	--link-color: ##06c;
+	--link-color: #0A84FF;
+	--success-color: #30D158;
 }
 
 /**
@@ -79,9 +80,73 @@ select {
 	box-shadow: inset 0 1px #656967;
 }
 
+.rm-saving-icon .rm-synced {
+	background: var(--success-color) !important;
+}
+
+.rm-new-page {
+	color: var(--success-color) !important;
+}
+
 /**
 * Left Sidebar
 */
+
+.roam-sidebar-container {
+	border-right: 1px solid #000;
+	background: #2E2F30 !important;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
+	background: #4D4E55 !important;
+	cursor: default;
+}
+
+.starred-pages-wrapper > div:first-child {
+	background: transparent !important;
+}
+
+.starred-pages-wrapper > div:nth-of-type(3) * {
+	display: none;
+}
+
+.starred-pages-wrapper > div:nth-of-type(3):before {
+	content: "Starred";
+	opacity: .6;
+	font-size: 12px;
+	font-weight: 600;
+	padding-left: 10px;
+	display: block;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page,
+.roam-body .roam-app .roam-sidebar-container > * {
+	color: #fff !important;
+}
+
+.starred-pages-wrapper {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.starred-pages div {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
+#roam-sidebar-logo:hover {
+	color: #fff;
+	text-decoration: none;
+	background: rgb(28, 28, 30) !important;
+}
+
+#roam-sidebar-logo {
+	text-decoration: none;
+}
+
+#roam-right-sidebar-content > div {
+	border-bottom: none !important;
+}
 
 /**
 * Right Sidebar
@@ -98,9 +163,29 @@ body,
 	background: var(--bg-color) !important;
 }
 
-.roam-sidebar-container {
-	border-right: 1px solid #000;
-	background: #2E2F30 !important;
+/**
+* Code Blocks
+*/
+
+code {
+	background-color: var(--bg-color) !important;
+	border: none;
+	color: rgb(940, 92, 230);
+}
+
+.CodeMirror {
+	background-color: var(--bg-color) !important;
+	color: #fff !important;
+}
+
+.cm-def,
+.cm-s-default .cm-keyword,
+.cm-atom {
+	color: var(--link-color) !important;
+}
+
+.cm-s-default .cm-builtin {
+	color: var(--link-color) !important;
 }
 
 .CodeMirror-gutters {
@@ -111,6 +196,10 @@ body,
 .CodeMirror-linenumber {
 	color: #8C8C8C !important;
 }
+
+/**
+* bp3-menus
+*/
 
 .bp3-menu a:hover,
 .bp3-button {
@@ -166,52 +255,17 @@ body,
 	color: #fff !important;
 }
 
-code {
-	background-color: var(--bg-color) !important;
-	border: none;
-	color: rgb(940, 92, 230);
-}
-
-.CodeMirror {
-	background-color: var(--bg-color) !important;
-	color: #fff !important;
-}
-
-.cm-def,
-.cm-s-default .cm-keyword,
-.cm-atom {
-	color: var(--link-color) !important;
-}
-
-.cm-s-default .cm-builtin {
-	color: rgb(10, 132, 255) !important;
-}
-
 .rm-level1 .checkmark {
 	top: -3px;
-}
-
-.rm-new-page {
-	color: rgb(48, 209, 88) !important;
 }
 
 .parent-path-wrapper {
 	background: rgb(28, 28, 30) !important;
 }
 
-.rm-saving-icon .rm-synced {
-	background: rgb(48, 209, 88) !important;
-}
-
 .check-container input:checked ~ .checkmark {
 	background-color: rgb(10, 132, 255) !important;
 }
-
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
-	background: #4D4E55 !important;
-	cursor: default;
-}
-
 
 h1 > a {
 	color: rgb(255, 159, 10) !important;
@@ -228,16 +282,6 @@ a > span {
 	background-color: rgb(44, 44, 46);
 	padding: 5px;
 	border-radius: 7px;
-}
-
-#roam-sidebar-logo:hover {
-	color: #fff;
-	text-decoration: none;
-	background: rgb(28, 28, 30) !important;
-}
-
-#roam-sidebar-logo {
-	text-decoration: none;
 }
 
 .katex * {
@@ -295,37 +339,6 @@ a > span {
 	color: black !important;
 }
 
-#roam-right-sidebar-content > div {
-	border-bottom: none !important;
-}
-
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page,
-.roam-body .roam-app .roam-sidebar-container > * {
-	color: #fff !important;
-}
-
-.starred-pages-wrapper {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
-.starred-pages-wrapper > div:nth-of-type(3) * {
-	display: none;
-}
-
-.starred-pages-wrapper > div:nth-of-type(3):before {
-	content: "Starred";
-	opacity: .6;
-	font-size: 12px;
-	font-weight: 600;
-	padding-left: 10px;
-}
-
-.starred-pages div {
-	padding-left: 20px !important;
-	padding-right: 20px !important;
-}
-
 .check-container {
 	padding-right: 4px;
 }
@@ -353,7 +366,7 @@ a > span {
 .h3,
 h3,
 .rm-level3 span {
-	color: rgb(48, 209, 88) !important;
+	color: var(--success-color) !important;
 }
 
 .roam-sidebar-container {
