@@ -63,7 +63,9 @@ a:hover {
 * Interactive Elements
 */
 
-select {
+select,
+.bp3-html-select select,
+.bp3-datepicker-caption select {
 	background: #646565 url("data:image/svg+xml,%3Csvg width='16' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%231660D1' d='M0 0h16v19H0z'/%3E%3Cpath d='M4.716 11.589a.5.5 0 01.638.057L8 14.293l2.646-2.647.07-.057a.5.5 0 01.638.765l-3 3-.07.057a.5.5 0 01-.638-.057l-3-3-.057-.07a.5.5 0 01.057-.638zm3.568-8l.07.057 3 3a.5.5 0 01-.638.765l-.07-.057L8 4.707 5.354 7.354a.5.5 0 01-.638.057l-.07-.057a.5.5 0 01-.057-.638l.057-.07 3-3a.5.5 0 01.638-.057z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E") no-repeat 100% !important;
 	color: white;
 	border: none;
@@ -71,7 +73,14 @@ select {
 	padding: 3px 26px 3px 10px;
 	font-size: 13px;
 	line-height: 1;
-	box-shadow: 0 0 2px rgba(0,0,0,.3), inset 0 1px #838384;
+	height: 19px;
+	box-shadow: 0 0 2px rgba(0,0,0,.3), inset 0 1px #838384 !important;
+	cursor: default;
+}
+
+/* Hide icon in bp3 select, we already have our own */
+.bp3-html-select .bp3-icon {
+	display: none;
 }
 
 .rm-alias-external {
@@ -314,6 +323,20 @@ code {
 .bp3-button:hover .bp3-icon-large,
 .bp3-button[class*="bp3-icon-"]:hover::before{
 	color: #fff !important;
+}
+
+.bp3-datepicker {
+	background: var(--bg-color-100);
+}
+
+.bp3-datepicker .DayPicker-Day--isToday {
+	background: var(--link-color);
+}
+
+.bp3-datepicker .DayPicker-Day:hover,
+.bp3-datepicker .DayPicker-Day:focus {
+	background: var(--bg-color-300);
+	cursor: default;
 }
 
 /* -------------------------------------------------------------------------- */
