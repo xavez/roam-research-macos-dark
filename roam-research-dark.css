@@ -13,6 +13,14 @@
 	--border-color  : #000000;
 }
 
+.rm-find-or-create-wrapper .rm-menu-item {
+	background: transparent !important;
+}
+
+.rm-find-or-create-wrapper .rm-menu-item[style="background-color: rgb(213, 218, 223);"] {
+	background: var(--bg-color-400) !important;
+}
+
 
 /**
 * Text & Typography
@@ -290,6 +298,10 @@ button:hover,
 	box-shadow: 0 0 1px 0 rgba(0,0,0,0.20), inset 0 1px 0 0 rgba(255,255,255,0.04), inset 0 0 0 0 rgba(255,255,255,0.16);
 	border-radius: 3px;
 	border: none;
+	padding: 3px 10px 3px 10px;
+	font-size: 13px;
+	line-height: 1;
+	height: 19px;
 }
 
 .bp3-button.bp3-intent-primary,
