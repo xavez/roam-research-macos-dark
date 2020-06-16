@@ -306,10 +306,14 @@ button:hover,
 	box-shadow: 0 0 1px 0 rgba(0,0,0,0.20), inset 0 1px 0 0 rgba(255,255,255,0.04), inset 0 0 0 0 rgba(255,255,255,0.16);
 	border-radius: 3px;
 	border: none;
-	padding: 3px 10px 3px 10px;
 	font-size: 13px;
 	line-height: 1;
 	height: 19px;
+}
+
+button,
+.bp3-button {
+	padding: 3px 10px 3px 10px;
 }
 
 .bp3-button.bp3-intent-primary,
@@ -500,7 +504,7 @@ h3,
 }
 
 .roam-bullet-closed {
-	background-color: var(--link-color) !important;
+	background-color: var(--bg-color-400) !important;
 }
 
 .simple-bullet-inner {
