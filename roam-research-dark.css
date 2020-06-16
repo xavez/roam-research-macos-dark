@@ -7,6 +7,7 @@
 :root {
 	--bg-color-100  : #1E1F22;
 	--bg-color-300  : #2E2F30;
+	--bg-color-400  : #515156;
 	--link-color    : #3A9BFF;
 	--success-color : #30D158;
 	--border-color  : #000000;
@@ -265,6 +266,26 @@ code {
 
 .CodeMirror-linenumber {
 	color: #8C8C8C !important;
+}
+
+/**
+* Kanban board
+*/
+
+.kanban-board {
+	background: var(--bg-color-300);
+}
+
+.kanban-column {
+	background: var(--bg-color-400);
+}
+
+.kanban-title {
+	border-color: var(--border-color);
+}
+
+.kanban-card {
+	background: var(--bg-color-100);
 }
 
 /**
