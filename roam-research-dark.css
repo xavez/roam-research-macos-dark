@@ -6,19 +6,13 @@
 
 :root {
 	--bg-color-100  : #1E1F22;
-	--bg-color-300  : #2E2F30;
+	--bg-color-200  : #2E2F30;
+	--bg-color-300  : #4D4E55;
 	--bg-color-400  : #515156;
 	--link-color    : #3A9BFF;
 	--success-color : #30D158;
 	--border-color  : #000000;
-}
-
-.rm-find-or-create-wrapper .rm-menu-item {
-	background: transparent !important;
-}
-
-.rm-find-or-create-wrapper .rm-menu-item[style="background-color: rgb(213, 218, 223);"] {
-	background: var(--bg-color-400) !important;
+	--tag-color     : #FF375F;
 }
 
 
@@ -59,12 +53,18 @@ h1 {
 	font-weight: 400 !important;
 }
 
+h1 > a,
+a > span,
 a {
 	color: var(--link-color);
 }
 
 a:hover {
 	color: var(--link-color);
+}
+
+strong {
+	color: #fff !important;
 }
 
 
@@ -102,6 +102,14 @@ select,
 	font-size: .7em;
 }
 
+.rm-find-or-create-wrapper .rm-menu-item {
+	background: transparent !important;
+}
+
+.rm-find-or-create-wrapper .rm-menu-item[style="background-color: rgb(213, 218, 223);"] {
+	background: var(--bg-color-300) !important;
+}
+
 /**
 * Top Bar
 */
@@ -127,12 +135,12 @@ select,
 
 .roam-sidebar-container {
 	border-right: 1px solid var(--border-color);
-	background: var(--bg-color-300) !important;
+	background: var(--bg-color-200) !important;
 	box-shadow: none !important;
 }
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
-	background: #4D4E55 !important;
+	background: var(--bg-color-300) !important;
 	cursor: default;
 }
 
@@ -251,7 +259,7 @@ code {
 }
 
 .CodeMirror-gutters {
-	background-color: var(--bg-color-300) !important;
+	background-color: var(--bg-color-200) !important;
 	border-right: none;
 }
 
@@ -264,7 +272,7 @@ code {
 */
 
 .kanban-board {
-	background: var(--bg-color-300);
+	background: var(--bg-color-200);
 }
 
 .kanban-column {
@@ -280,7 +288,7 @@ code {
 }
 
 /**
-* bp3-menus
+* Blueprint 3 customizations
 */
 
 button,
@@ -379,9 +387,32 @@ button:hover,
 
 .bp3-datepicker .DayPicker-Day:hover,
 .bp3-datepicker .DayPicker-Day:focus {
-	background: var(--bg-color-300);
+	background: var(--bg-color-200);
 	cursor: default;
 }
+
+.bp3-elevation-3 {
+	background-color: rgb(44, 44, 46) !important;
+}
+
+.bp3-elevation-3 > .dont-unfocus-block {
+	filter: invert(100%);
+	color: #000 !important;
+	/*RR change: Inverts the colors of the / and link search menus*/
+}
+
+.bp3-text-overflow-ellipsis {
+	color: #fff !important;
+}
+
+.bp3-elevation-3 > .dont-unfocus-block .bp3-text-overflow-ellipsis {
+	color: black !important;
+}
+
+.bp3-input {
+	background: #222;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /* TODO
@@ -392,14 +423,7 @@ button:hover,
 }
 
 .check-container input:checked ~ .checkmark {
-	background-color: rgb(10, 132, 255) !important;
-}
-
-h1 > a {
-	color: var(--link-color) !important;
-}
-a > span {
-	color: var(--link-color) !important;
+	background-color: var(--link-color) !important;
 }
 
 .rm-query {
@@ -409,7 +433,7 @@ a > span {
 .rm-encrypted-block,
 .rm-query-title,
 .rm-embed-container {
-	background: var(--bg-color-300) !important;
+	background: var(--bg-color-200) !important;
 }
 
 .rm-block-ref:hover {
@@ -431,34 +455,12 @@ a > span {
 	color: var(--link-color) !important;
 }
 
-.bp3-elevation-3 {
-	background-color: rgb(44, 44, 46) !important;
-}
-
-.bp3-elevation-3 > .dont-unfocus-block {
-	filter: invert(100%);
-	color: #000 !important;
-	/*RR change: Inverts the colors of the / and link search menus*/
-}
-
-.bp3-text-overflow-ellipsis {
-	color: #fff !important;
-}
-
-.bp3-elevation-3 > .dont-unfocus-block .bp3-text-overflow-ellipsis {
-	color: black !important;
-}
-
 .check-container {
 	padding-right: 4px;
 }
 
 .rm-page-ref-brackets {
 	opacity: .3;
-}
-
-.bp3-input {
-	background: #222;
 }
 
 .roam-log-container .roam-log-page {
@@ -481,10 +483,6 @@ h3,
 
 .rm-reference-item {
 	margin-bottom: 10px;
-}
-
-strong {
-	color: #fff !important;
 }
 
 .roam-highlight,
@@ -510,7 +508,7 @@ strong {
 }
 
 .rm-page-ref-tag {
-	color: rgb(255, 55, 95);
+	color: var(--tag-color);
 }
 
 }
