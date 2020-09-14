@@ -399,10 +399,10 @@ button,
 	background-color: rgb(44, 44, 46) !important;
 }
 
-.bp3-elevation-3 > .dont-unfocus-block {
-	filter: invert(100%);
-	color: #000 !important;
-	/*RR change: Inverts the colors of the / and link search menus*/
+
+/* Inverts the colors of the / and link search menus */
+.bp3-elevation-3 .dont-unfocus-block[style*="background-color: rgb(213, 218, 223);"] {
+	background: var(--bg-color-300) !important;
 }
 
 .bp3-text-overflow-ellipsis {
