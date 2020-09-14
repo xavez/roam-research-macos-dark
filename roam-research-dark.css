@@ -248,6 +248,15 @@ code {
 	color: #fff !important;
 }
 
+.CodeMirror-gutters {
+	background-color: var(--bg-color-200) !important;
+	border-right: none;
+}
+
+.CodeMirror-linenumber {
+	color: #8C8C8C !important;
+}
+
 .cm-def,
 .cm-s-default .cm-keyword,
 .cm-atom {
@@ -256,15 +265,6 @@ code {
 
 .cm-s-default .cm-builtin {
 	color: var(--link-color) !important;
-}
-
-.CodeMirror-gutters {
-	background-color: var(--bg-color-200) !important;
-	border-right: none;
-}
-
-.CodeMirror-linenumber {
-	color: #8C8C8C !important;
 }
 
 /**
