@@ -409,10 +409,6 @@ button,
 	color: #fff !important;
 }
 
-.bp3-elevation-3 > .dont-unfocus-block .bp3-text-overflow-ellipsis {
-	color: black !important;
-}
-
 .bp3-input {
 	background: #222;
 }
