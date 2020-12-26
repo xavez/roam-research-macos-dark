@@ -441,7 +441,8 @@ button,
 	background: var(--link-color);
 }
 
-.rm-page-ref-link-color {
+.rm-page-ref-link-color,
+.rm-page-ref--link {
 	color: var(--link-color) !important;
 }
 
