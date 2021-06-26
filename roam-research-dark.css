@@ -78,7 +78,7 @@ select,
 .bp3-datepicker-caption select {
 	background: #646565 url("data:image/svg+xml,%3Csvg width='16' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%231660D1' d='M0 0h16v19H0z'/%3E%3Cpath d='M4.716 11.589a.5.5 0 01.638.057L8 14.293l2.646-2.647.07-.057a.5.5 0 01.638.765l-3 3-.07.057a.5.5 0 01-.638-.057l-3-3-.057-.07a.5.5 0 01.057-.638zm3.568-8l.07.057 3 3a.5.5 0 01-.638.765l-.07-.057L8 4.707 5.354 7.354a.5.5 0 01-.638.057l-.07-.057a.5.5 0 01-.057-.638l.057-.07 3-3a.5.5 0 01.638-.057z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E") no-repeat 100% !important;
 	color: white;
-	border: none;
+	border: 0;
 	-webkit-appearance: none;
 	padding: 3px 26px 3px 10px;
 	font-size: 13px;
@@ -240,7 +240,7 @@ body,
 
 code {
 	background-color: var(--bg-color-100) !important;
-	border: none;
+	border: 0;
 	color: rgb(940, 92, 230);
 }
 
@@ -304,9 +304,10 @@ button,
 button:hover,
 .bp3-button:hover {
 	background: linear-gradient(#6C6C6D, #646465);
+	background-color: transparent !important;
 	box-shadow: 0 0 1px 0 rgba(0,0,0,0.20), inset 0 1px 0 0 rgba(255,255,255,0.04), inset 0 0 0 0 rgba(255,255,255,0.16);
 	border-radius: 3px;
-	border: none;
+	border: 0 !important;
 	font-size: 13px;
 	line-height: 1;
 	height: 19px;
@@ -368,18 +369,32 @@ button,
 	filter: drop-shadow(0 -1px #4C4C50);
 }
 
+.bp3-menu-item .bp3-menu-item-label {
+	color:  var(--bg-color-400);
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon,
+.bp3-menu-item > .bp3-icon,
+.bp3-menu-item > .bp3-icon > svg,
 .bp3-button .bp3-icon,
 .bp3-button .bp3-icon-standard,
+button .bp3-icon-standard,
 .bp3-button .bp3-icon-large,
 .bp3-button[class*="bp3-icon-"]::before{
 	color: #888 !important;
+	fill: #888 !important;
 }
 
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover .icon,
+.bp3-menu-item:hover > .bp3-icon,
+.bp3-menu-item:hover > .bp3-icon > svg,
 .bp3-button:hover .bp3-icon,
 .bp3-button:hover .bp3-icon-standard,
+button:hover .bp3-icon-standard,
 .bp3-button:hover .bp3-icon-large,
 .bp3-button[class*="bp3-icon-"]:hover::before{
 	color: #fff !important;
+	fill: #fff !important;
 }
 
 .bp3-datepicker {
