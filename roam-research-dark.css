@@ -434,6 +434,10 @@ button:hover .bp3-icon-standard,
 /* TODO
 /* -------------------------------------------------------------------------- */
 
+.DayPicker-Day--today {
+	background: var(--bg-color-300);
+}
+
 .rm-level1 .checkmark {
 	top: -3px;
 }
