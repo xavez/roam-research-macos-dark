@@ -401,7 +401,7 @@ button:hover .bp3-icon-standard,
 	background: var(--bg-color-100);
 }
 
-.bp3-datepicker .DayPicker-Day--isToday {
+.rm-jump-date-picker .DayPicker-Day.DayPicker-Day--today {
 	background: var(--link-color);
 }
 
@@ -433,10 +433,6 @@ button:hover .bp3-icon-standard,
 /* -------------------------------------------------------------------------- */
 /* TODO
 /* -------------------------------------------------------------------------- */
-
-.DayPicker-Day--today {
-	background: var(--bg-color-300);
-}
 
 .rm-level1 .checkmark {
 	top: -3px;
